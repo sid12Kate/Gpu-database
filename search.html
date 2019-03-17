@@ -1,0 +1,26 @@
+<html>
+<head>
+  <title> Query the list of gpu </title>
+</head>
+<body>
+  <p> Select the following checkboxes </p>
+    <form method="get" action="/search">
+      <input type="checkbox" name="gpu_geometryShader" value="geometryShader" />Geometry Shader<br/>
+
+      <input type="checkbox" name="gpu_tesselationShader" value="tesselationShader" />Tesselation Shader<br/>
+
+      <input type="checkbox" name="gpu_shaderInt16" value="shaderInt16" />Shader Int16<br/>
+
+      <input type="checkbox" name="gpu_sparseBinding" value="sparseBinding" />Sparse Binding<br/>
+
+      <input type="checkbox" name="gpu_textureCompressionETC2" value="textureCompressionETC2" />Texture CompressionETC2<br/>
+
+      <input type="checkbox" name="gpu_vertexPipelineStoresAndAtomics" value="vertexPipelineStoresAndAtomics" />Vertex pipeline stores and Atomics<br/>
+
+      <input type="submit" name="button" value="Search"/>
+
+      <p> Result :  <br/> </p>
+      {% for x in gpus %}
+      {{ x.name }} </br>
+      {% endfor %}
+  </form>

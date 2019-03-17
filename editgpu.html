@@ -1,0 +1,56 @@
+<html>
+    <head>
+         <meta charset="utf-8"/>
+
+
+         <title>Enter GPU Information</title>
+    <head>
+      <body>
+
+        Enter the information below<br/>
+
+          <form method="post" action="/editgpu">
+            Name:<input type="text" name="gpu_name" value="{{ mygpuname.name }}" readonly/><br/>
+
+            Manufacturer:<input type="text" name="manufacturer_name" value="{{ mygpuname.manufacturer }}" /><br/>
+
+            Date:<<input type="date" name="gpu_date" value="{{ mygpuname.date }}" required/><br/>
+            {% if  mygpuname.geometryShader  %}
+            <input type="checkbox" name="gpu_geometryShader" value="{{ mygpuname.geometryShader }}" checked="f" />Geometry Shader<br/>
+            {% else %}
+              <input type="checkbox" name="gpu_geometryShader" value="{{ mygpuname.geometryShader }}"  />Geometry Shader<br/>
+            {% endif %}
+            {% if mygpuname.tesselationShader %}
+            <input type="checkbox" name="gpu_tesselationShader" value="{{ mygpuname.tesselationShader }}" checked="{{ mygpuname.tesselationShader }}"/>Tesselation Shader<br/>
+            {% else %}
+            <input type="checkbox" name="gpu_tesselationShader" value="{{ mygpuname.tesselationShader }}" "/>Tesselation Shader<br/>
+            {% endif %}
+            {% if mygpuname.shaderInt16 %}
+            <input type="checkbox" name="gpu_shaderInt16" value="{{ mygpuname.shaderInt16 }}" checked="{{ mygpuname.shaderInt16 }}" />Shader Int16<br/>
+            {% else %}
+            <input type="checkbox" name="gpu_shaderInt16" value="{{ mygpuname.shaderInt16 }}"  />Shader Int16<br/>
+            {% endif %}
+            {% if mygpuname.sparseBinding %}
+            <input type="checkbox" name="gpu_sparseBinding" value="{{ mygpuname.sparseBinding }}" checked="{{ mygpuname.sparseBinding }}" />Sparse Binding<br/>
+            {% else %}
+            <input type="checkbox" name="gpu_sparseBinding" value="{{ mygpuname.sparseBinding }}"  />Sparse Binding<br/>
+            {% endif %}
+            {% if mygpuname.textureCompressionETC2 %}
+            <input type="checkbox" name="gpu_textureCompressionETC2" value="{{ mygpuname.textureCompressionETC2 }}" checked="{{ mygpuname.textureCompressionETC2 }}" />Texture CompressionETC2<br/>
+            {% else %}
+            <input type="checkbox" name="gpu_textureCompressionETC2" value="{{ mygpuname.textureCompressionETC2 }}"  />Texture CompressionETC2<br/>
+            {% endif %}
+            {% if mygpuname.vertexPipelineStoresAndAtomics %}
+            <input type="checkbox" name="gpu_vertexPipelineStoresAndAtomics" value="{{ mygpuname.vertexPipelineStoresAndAtomics }}" checked="True"/>Vertex pipeline stores and Atomics<br/>
+            {% else %}
+            <input type="checkbox" name="gpu_vertexPipelineStoresAndAtomics" value="{{ mygpuname.vertexPipelineStoresAndAtomics }}" />Vertex pipeline stores and Atomics<br/>
+            {% endif %}
+            <input type="submit" name="button" value="Update"/>
+          </form>
+
+          <form method="post" action="/editgpu">
+            <input type="submit" name="button" value="Cancel"/>
+          </form>
+
+        </body>
+</html>

@@ -1,0 +1,39 @@
+<html>
+    <head>
+         <meta charset="utf-8"/>
+
+
+         <title>Enter GPU Information</title>
+    <head>
+      <body>
+
+        Enter the information below<br/>
+
+          <form method="post" action="/edit">
+            Name:<input type="text" name="gpu_name" value="" required/><br/>
+
+            Manufacturer:<input type="text" name="manufacturer_name" value=""/><br/>
+
+            Date:<<input type="date" name="gpu_date" value="date" required/><br/>
+
+            <input type="checkbox" name="gpu_geometryShader" value="geometryShader" />Geometry Shader<br/>
+
+            <input type="checkbox" name="gpu_tesselationShader" value="tesselationShader" />Tesselation Shader<br/>
+
+            <input type="checkbox" name="gpu_shaderInt16" value="shaderInt16" />Shader Int16<br/>
+
+            <input type="checkbox" name="gpu_sparseBinding" value="sparseBinding" />Sparse Binding<br/>
+
+            <input type="checkbox" name="gpu_textureCompressionETC2" value="textureCompressionETC2" />Texture CompressionETC2<br/>
+
+            <input type="checkbox" name="gpu_vertexPipelineStoresAndAtomics" value="vertexPipelineStoresAndAtomics" />Vertex pipeline stores and Atomics<br/>
+
+            <input type="submit" name="button" value="Update"/>
+          </form>
+
+          <form method="post" action="/edit">
+            <input type="submit" name="button" value="Cancel"/>
+          </form>
+
+        </body>
+</html>

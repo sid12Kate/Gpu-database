@@ -1,0 +1,62 @@
+<html>
+<head>
+  <title> GPU Comparison</title>
+  <meta charset="utf-8"/>
+</head>
+<body>
+  <h2> GPU COMPARISON</h2>
+  <table>
+    <tr>
+      <th>{{ mygpu_1.name }}</th>
+      <th>{{ mygpu_2.name }}</th>
+    </tr>
+
+
+    <tr>
+      <td>Manufacturer:{{ mygpu_1.manufacturer }}</td>
+      <td>Manufacturer:{{ mygpu_2.manufacturer }}</td>
+    </tr>
+    <tr>
+      <td>Date:{{ mygpu_1.date }}</td>
+      <td>Date:{{ mygpu_2.date }}</td>
+    </tr>
+
+    <tr>
+      <td>Geometry Shader:{{ mygpu_1.geometryShader }}</td>
+      <td>Geometry Shader:{{ mygpu_2.geometryShader }}</td>
+    </tr>
+
+    <tr>
+      <td>Shader Int16:{{ mygpu_1.shaderInt16 }}</td>
+      <td>Shader Int16:{{ mygpu_2.shaderInt16 }}</td>
+    </tr>
+
+    <tr>
+      <td>Sparse Binding:{{ mygpu_1.sparseBinding }}</td>
+      <td>Sparse Binding:{{ mygpu_2.sparseBinding }}</td>
+    </tr>
+
+    <tr>
+      <td>Tesselation Shader:{{ mygpu_1.tesselationShader }}</td>
+      <td>Tesselation Shader:{{ mygpu_2.tesselationShader }}</td>
+    </tr>
+
+    <tr>
+      <td>Texture CompressionETC2:{{ mygpu_1.textureCompressionETC2 }}</td>
+      <td>Texture CompressionETC2:{{ mygpu_2.textureCompressionETC2 }}</td>
+    </tr>
+
+    <tr>
+      <td>Vertex Pipeline Stores And Atomics:{{ mygpu_1.vertexPipelineStoresAndAtomics }}</td>
+      <td>Vertex Pipeline Stores And Atomics:{{ mygpu_2.vertexPipelineStoresAndAtomics }}</td>
+    </tr>
+
+
+
+  </table>
+
+  <form method="post" action="/compareresult">
+    <input type="submit" name="button" value="Back"/>
+  </form>
+  </body>
+</html>

@@ -1,0 +1,29 @@
+<html>
+<head>
+  <title> GPU INFORMATION</title>
+  <meta charset="utf-8"/>
+</head>
+<body>
+  <p> GPU INFORMATION</p>
+
+    GPU Name:{{ mygpuname.name }}<br/>
+    Manufacturer:{{ mygpuname.manufacturer }}<br/>
+    Date:{{ mygpuname.date }}<br/>
+    Geometry Shader:{{ mygpuname.geometryShader }}<br/>
+    Shader Int16:{{ mygpuname.shaderInt16 }}<br/>
+    Sparse Binding:{{ mygpuname.sparseBinding }}<br/>
+    Tesselation Shader:{{ mygpuname.tesselationShader }}<br/>
+    Texture CompressionETC2:{{ mygpuname.textureCompressionETC2 }}<br/>
+    Vertex Pipeline Stores And Atomics:{{ mygpuname.vertexPipelineStoresAndAtomics }}<br/>
+
+  <br/>
+  <br/>
+
+
+<a href='/editgpu?value={{ mygpuname.name }}'>Edit</br>
+
+  <form method="post" action="/display">
+    <input type="submit" name="button" value="Back"/>
+  </form>
+  </body>
+</html>
