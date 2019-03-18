@@ -43,5 +43,5 @@ class EditGpu(webapp2.RequestHandler):
             mygpu.put()
 
             self.redirect('/')
-        elif self.request.get('button') == 'Back':
+        elif self.request.get('button') == 'Cancel':
             self.redirect('/')

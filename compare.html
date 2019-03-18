@@ -6,8 +6,9 @@
   <body>
     <p> From the below boxes, select the gpu that you want to compare </p>
 
-    Option 1 :
+
    <form method="post" action="/compare">
+     Option 1 :
     <select name = "v_1">
       {% for x in gpu_list %}
       <option value="{{ x.name }}">{{ x.name }}</option>
@@ -21,7 +22,7 @@
       <option value="{{ y.name }}">{{ y.name }}</option>
       {% endfor %}
     </select>
-
+   <br/>
       <input type="submit" name="button" value="Compare"/>
     </form>
 

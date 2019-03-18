@@ -44,10 +44,9 @@ class Edit(webapp2.RequestHandler):
                 mygpu.textureCompressionETC2 = bool(self.request.get('gpu_textureCompressionETC2'))
                 mygpu.vertexPipelineStoresAndAtomics = bool(self.request.get('gpu_vertexPipelineStoresAndAtomics'))
                 mygpu.put()
-
                 self.redirect('/')
             else:
-                self.redirect('/edit')
+                self.response.write('Gpu aldready exists')
 
         elif self.request.get('button') == 'Cancel':
             self.redirect('/')

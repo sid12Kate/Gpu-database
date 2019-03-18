@@ -31,6 +31,6 @@ class Compare(webapp2.RequestHandler):
             v1 = self.request.get('v_1')
             v2 = self.request.get('v_2')
             if v1 == v2:
-                self.response.write('Please select different gpus')
+                self.response.write('Please select two different gpus')
             else:
                 self.redirect('/compareresult?value_1='+v1+ '&value_2='+v2)

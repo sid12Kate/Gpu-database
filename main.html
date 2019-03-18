@@ -2,22 +2,52 @@
   <head>
     <meta charset="utf-8"/>
     <title>User Login/Logout with datastore</title>
-  </head>
-  <body>
+    <style>
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #333;
+}
+
+li {
+  float: left;
+}
+
+li a {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+li a:hover {
+  background-color: #111;
+}
+</style>
+</head>
+<body bgcolor="#E6E6FA">
+
+
+
     {% if user %}
-    {{ welcome }} {{ user.email() }} welcome to the application<br/>
-    Below you will find your details as currently entered into the system<br/>
-    <br/>
-    Name: {{ user.email() }}<br/>
-    To add new gpu  <a href="/edit">click here</a><br/>
-    To query the list of gpu  <a href="/search">click here</a><br/>
-    To compare the list of gpu  <a href="/compare">click here</a><br/>
+    <ul>
+      <li><a href="/edit">AddGPU</a></li>
+      <li><a href="/search">Search</a></li>
+      <li><a href="/compare">Compare</a></li>
+      <li><a href="{{ url }}">Logout</a></li>
+    </ul>
+  <center><font size="5">  {{ welcome }} {{ user.email() }} </font><br/></center>
 
 
-    <p>List of gpu</br>
-      <p> Below you will see the items that are currently stored in the list </p>
+
+
+    <center><p><font size="6">List of gpu</font></br><center>
+
       {% for x in gpu_list %}
-      <a href='/display?value={{ x.name }}'>{{ x.name }}</a></br>
+      <p><center><a href='/display?value={{ x.name }}'>{{ x.name }}</a></br></center></p>
 
       {% endfor %}
 
@@ -26,10 +56,10 @@
 
     {% else %}
     <p>Hello guest welcome to the application</p>
-
+    you can {{ url_string }} <a href='{{ url }}'>here
     {% endif %}
 
-    <p>you can {{ url_string }} <a href='{{ url }}'>here</a></p>
+
 
 
 
