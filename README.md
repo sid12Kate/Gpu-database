@@ -1,2 +1,3 @@
-"# CC_Project" 
-"# CC_Project" 
+"# GPU Database" 
+This project is simple application for storing, accessing and updating informations about GPUs.
+
